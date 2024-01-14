@@ -3,6 +3,7 @@ lib
 , buildDotnetModule
 , dotnetCorePackages
 , gcc
+, zlib
 , linkNugets ? true 
 }:
 buildDotnetModule rec {
@@ -15,6 +16,7 @@ buildDotnetModule rec {
   selfContainedBuild = true;
   nativeBuildInputs = [
     gcc
+    zlib
   ];
   dotnetFlags = [
     #  "-bl"

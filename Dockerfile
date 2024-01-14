@@ -4,7 +4,7 @@
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build-env
 RUN apt update
-RUN apt install -y build-essential
+RUN apt install -y build-essential zlib1g-dev
 
 WORKDIR /app
 COPY ./csharp ./
